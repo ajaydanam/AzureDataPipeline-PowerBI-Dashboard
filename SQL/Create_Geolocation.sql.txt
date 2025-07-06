@@ -1,0 +1,8 @@
+CREATE TABLE geolocation (
+    geolocation_zip_code_prefix INT,
+    geolocation_lat FLOAT,
+    geolocation_lng FLOAT,
+    geolocation_city VARCHAR(58),
+    geolocation_state VARCHAR(22)
+);
+
