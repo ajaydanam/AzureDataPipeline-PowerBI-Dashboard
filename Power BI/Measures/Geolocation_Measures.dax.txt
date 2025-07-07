@@ -1,0 +1,13 @@
+Customers by State = 
+SUMMARIZE (
+    Customers,
+    Customers[customer_state],
+    "Customer Count", COUNTROWS(Customers)
+)
+
+Revenue by State = 
+SUMMARIZE (
+    Customers,
+    Customers[customer_state],
+    "Total Revenue", [Customer Revenue]
+)

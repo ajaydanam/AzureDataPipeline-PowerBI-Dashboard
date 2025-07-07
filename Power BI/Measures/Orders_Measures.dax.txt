@@ -1,0 +1,51 @@
+Total Orders = COUNT(Orders[order_id])
+
+Cancelled Orders = 
+CALCULATE(
+    COUNTROWS(Orders),
+    Orders[order_status] = "canceled"
+)
+
+Delivered Orders = 
+CALCULATE(
+    COUNTROWS(Orders),
+    Orders[order_status] = "delivered"
+)
+
+Orders YTD = 
+CALCULATE(
+    [Total Orders],
+    DATESYTD('Calendar'[Date])
+)
+
+Orders MTD = 
+CALCULATE(
+    [Total Orders],
+    DATESMTD('Calendar'[Date])
+)
+
+Orders Last Month = 
+CALCULATE(
+    [Total Orders],
+    PREVIOUSMONTH('Calendar'[Date])
+)
+
+Avg Delivery Time (Days) = 
+AVERAGEX(
+    Orders,
+    DATEDIFF(Orders[order_purchase_timestamp], Orders[order_delivered_customer_date], DAY)
+)
+
+Delayed Orders = 
+CALCULATE(
+    COUNTROWS(Orders),
+    Orders[order_estimated_delivery_date] < Orders[order_delivered_customer_date]
+)
+
+On-Time Delivery Rate = 
+DIVIDE(
+    COUNTROWS(
+        FILTER(Orders, Orders[order_estimated_delivery_date] >= Orders[order_delivered_customer_date])
+    ),
+    [Total Orders]
+)

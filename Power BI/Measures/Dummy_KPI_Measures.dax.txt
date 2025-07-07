@@ -1,0 +1,5 @@
+KPI_Measures = 
+DATATABLE(
+    "KPI", STRING,
+    { { "Placeholder" } }
+)

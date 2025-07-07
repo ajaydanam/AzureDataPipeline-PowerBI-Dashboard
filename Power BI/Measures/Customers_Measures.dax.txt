@@ -1,0 +1,32 @@
+Unique Customers = DISTINCTCOUNT(Customers[customer_id])
+
+Returning Customers = 
+CALCULATE(
+    DISTINCTCOUNT(Customers[customer_id]),
+    FILTER(
+        Orders,
+        Orders[order_approved_at] > 
+            CALCULATE(
+                MIN(Orders[order_approved_at]), 
+                ALLEXCEPT(Customers, Customers[customer_id])
+            )
+    )
+)
+
+Customer First Order Date = 
+CALCULATETABLE (
+    ADDCOLUMNS (
+        VALUES ( Customers[customer_id] ),
+        "FirstOrder", CALCULATE ( MIN ( Orders[order_purchase_timestamp] ) )
+    ),
+    REMOVEFILTERS ( Orders )
+)
+
+Customer Revenue = 
+SUMX(
+    RELATEDTABLE(Order_Payments),
+    Order_Payments[payment_value]
+)
+
+Top Customer = 
+TOPN(1, SUMMARIZE(Customers, Customers[customer_id], "Total", [Customer Revenue]), [Customer Revenue])

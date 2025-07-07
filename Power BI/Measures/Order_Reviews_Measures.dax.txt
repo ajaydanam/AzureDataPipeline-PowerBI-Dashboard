@@ -1,0 +1,17 @@
+Total Reviews = COUNT(Order_Reviews[review_id])
+
+Avg Review Score = AVERAGE(Order_Reviews[review_score])
+
+Five Star Reviews = CALCULATE(COUNTROWS(Order_Reviews), Order_Reviews[review_score] = 5)
+
+Low Rating Reviews (<=2) = 
+CALCULATE(
+    COUNTROWS(Order_Reviews),
+    Order_Reviews[review_score] <= 2
+)
+
+Review Response Time (days) = 
+AVERAGEX(
+    Order_Reviews,
+    DATEDIFF(Order_Reviews[review_creation_date], Order_Reviews[review_answer_timestamp], DAY)
+)

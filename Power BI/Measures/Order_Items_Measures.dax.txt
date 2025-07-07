@@ -1,0 +1,17 @@
+
+Total Products Sold = SUM(Order_Items[order_item_id])
+
+Average Product Price = AVERAGE(Order_Items[price])
+
+Total Freight Value = SUM(Order_Items[freight_value])
+
+Avg Freight per Order = AVERAGE(Order_Items[freight_value])
+
+Product Revenue = 
+SUMX(Order_Items, Order_Items[price] * Order_Items[order_item_id])
+
+Avg Items per Order = 
+AVERAGEX(
+    SUMMARIZE(Order_Items, Order_Items[order_id], "ItemCount", COUNT(Order_Items[order_item_id])),
+    [ItemCount]
+)

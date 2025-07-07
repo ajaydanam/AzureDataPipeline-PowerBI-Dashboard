@@ -1,0 +1,21 @@
+
+Unique Products = DISTINCTCOUNT(Products[product_id])
+
+Avg Product Weight (grams) = AVERAGE(Products[product_weight_g])
+
+Avg Product Length (cm) = AVERAGE(Products[product_length_cm])
+
+Avg Product Width (cm) = AVERAGE(Products[product_width_cm])
+
+Avg Product Height (cm) = AVERAGE(Products[product_height_cm])
+
+Missing Product Dimensions = 
+COUNTROWS(
+    FILTER(
+        Products,
+        ISBLANK(Products[product_weight_g]) 
+        || ISBLANK(Products[product_length_cm])
+        || ISBLANK(Products[product_width_cm])
+        || ISBLANK(Products[product_height_cm])
+    )
+)

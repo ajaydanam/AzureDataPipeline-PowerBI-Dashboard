@@ -1,0 +1,12 @@
+Unique Categories = DISTINCTCOUNT(product_category_name_translation[product_category_name])
+
+Top Product Categories by Sales = 
+TOPN(
+    5,
+    SUMMARIZE(
+        Orders,
+        Products[product_category_name],
+        "Total Sales", [Total Revenue]
+    ),
+    [Total Revenue]
+)

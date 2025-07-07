@@ -1,0 +1,25 @@
+Total Sellers = DISTINCTCOUNT(Sellers[seller_id])
+
+Avg Freight per Seller = 
+AVERAGEX(
+    Sellers,
+    CALCULATE(SUM(Order_Items[freight_value]))
+)
+
+Orders per Seller = 
+AVERAGEX(
+    Sellers,
+    CALCULATE(DISTINCTCOUNT(Order_Items[order_id]))
+)
+
+Top Seller Revenue = 
+TOPN(
+    1,
+    SUMMARIZE(
+        Sellers,
+        Sellers[seller_id],
+        "Revenue", SUM(Order_Items[price])
+    ),
+    [Revenue]
+)
+

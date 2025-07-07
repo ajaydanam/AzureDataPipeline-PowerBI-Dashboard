@@ -1,0 +1,19 @@
+Total Revenue = SUM(Order_Payments[payment_value])
+
+Revenue YTD = 
+CALCULATE([Total Revenue], DATESYTD('Calendar'[Date]))
+
+Revenue MTD = 
+CALCULATE([Total Revenue], DATESMTD('Calendar'[Date]))
+
+Revenue Last Month = 
+CALCULATE([Total Revenue], PREVIOUSMONTH('Calendar'[Date]))
+
+Avg Revenue per Order = 
+DIVIDE([Total Revenue], [Total Orders])
+
+Max Payment per Order = 
+MAX(Order_Payments[payment_value])
+
+Payment Installments Avg = 
+AVERAGE(Order_Payments[payment_installments])

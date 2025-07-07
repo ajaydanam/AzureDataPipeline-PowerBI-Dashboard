@@ -1,0 +1,7 @@
+Current Month = FORMAT(MAX('Calendar'[Date]), "MMMM YYYY")
+
+Previous Month = FORMAT(EDATE(MAX('Calendar'[Date]), -1), "MMMM YYYY")
+
+Weekday Name = FORMAT('Calendar'[Date], "dddd")
+
+Month Name = FORMAT('Calendar'[Date], "MMMM")
