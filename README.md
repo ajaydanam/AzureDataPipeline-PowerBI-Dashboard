@@ -9,7 +9,7 @@ This is a full-scale Power BI project built from raw `.csv` files of the [Olist 
 
 ------
 
-##  Project Overview
+##  🔗  Project Overview
 
 - Data Source: 9 CSV files uploaded from Azure Blob Storage
 - ETL Pipeline: Data cleaned and modeled in Power BI Power Query
@@ -18,12 +18,12 @@ This is a full-scale Power BI project built from raw `.csv` files of the [Olist 
 
 ------
 
-##  Folder Structure
+## 📁 Folder Structure
 
 AzureDataPipeline-PowerBI-Dashboard/
 ├── Data/ ← Raw CSV files
 ├── Images/ ← Power BI dashboard screenshots
-├── PowerBI/
+├── Power BI/
 │ ├── Measures/ ← All the DAX measures
 │ └── Report/ ← Final .pbix file
 ├── SQL/ ← SQL scripts to create schema tables in Azure SQL Database
@@ -31,7 +31,7 @@ AzureDataPipeline-PowerBI-Dashboard/
 
 ------
 
-##  Key DAX Measures
+##  🧠  Key DAX Measures
 
 - Orders: Total, YTD, MTD, Cancelled, Delivered, On-Time %
 - Revenue: Total, per Order, YTD/MTD, Avg Installments
@@ -40,17 +40,17 @@ AzureDataPipeline-PowerBI-Dashboard/
 - Reviews: Avg Score, 5-Star %, Response Time
 - Sellers: Revenue per Seller, Orders per Seller
 
->  View all DAX logic under `/Power BI/Measures
+> ⚙️  View all DAX logic under `/Power BI/Measures
 
 ------
 
-## Visual Insights
+##  📊  Visual Insights
 
 To be added in `/Images` folder soon...
 
 ------
 
-## Built With
+##   🚀 Built With
 
 - Power BI (DAX, Power Query, Relationships)
 - Azure Blob Storage (CSV Data Source)
