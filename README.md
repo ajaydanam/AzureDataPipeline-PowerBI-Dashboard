@@ -46,7 +46,7 @@ AzureDataPipeline-PowerBI-Dashboard/
 
 ##  📊  Visual Insights
 
-Uploaded high-resolution screenshots of both report pages for visual reference:
+Uploaded high-resolution screenshots of report pages for visual reference:
 
 • executive_dashboard.png – Showcases key e-commerce metrics including Total Orders, Revenue, Category Performance, and Geo insights.
 
