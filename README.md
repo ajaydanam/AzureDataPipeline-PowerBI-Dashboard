@@ -46,7 +46,14 @@ AzureDataPipeline-PowerBI-Dashboard/
 
 ##  📊  Visual Insights
 
-To be added in `/Images` folder soon...
+Uploaded high-resolution screenshots of both report pages for visual reference:
+
+• executive_dashboard.png – Showcases key e-commerce metrics including Total Orders, Revenue, Category Performance, and Geo insights.
+
+• order_fulfillment_dashboard.png – Visualizes order status breakdown, average delivery times, and fulfillment efficiency across periods.
+
+These visuals will be embedded in the main README to help viewers quickly understand the scope and design of the Power BI dashboards built as part of the Azure Data Pipeline project.
+
 
 ------
 
