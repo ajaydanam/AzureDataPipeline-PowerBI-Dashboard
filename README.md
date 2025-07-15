@@ -4,9 +4,6 @@ End-to-end ETL pipeline design using Azure Data Factory, Azure Blob Storage, Azu
 
 This is a full-scale Power BI project built from raw `.csv` files of the [Olist E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). The goal is to simulate a real-world data pipeline, perform transformations, build KPIs, and generate dashboards using best BI practices.
 
-
-This is a full-scale Power BI project built from raw `.csv` files of the [Olist E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). The goal is to simulate a real-world data pipeline, perform transformations, build KPIs and generate dashboards using best BI practices.
-
 ------
 
 ##  🔗  Project Overview
